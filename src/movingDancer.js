@@ -12,19 +12,20 @@ makeMovingDancer.prototype.step = function() {
   this.setPosition(this.top + x, this.left + y); 
   
   
-  var checkPosition = function() {
-    var movingObj = this;
-    y = this.top;
-    x = this.left;
+  var checkPosition = function(y,x) {
+    // var movingObj = this;
+    // y = this.top;
+    // x = this.left;
     window.dancers.forEach(function(el) {
-      if (el === this) {
-        return;
-      }
-      var distance = Math.sqrt(Math.pow((x-el.left),2) + Math.pow((y - el.left),2));
-      if(distance <= 115) {
-        $('.collision').play();
+      // if (el === this) {
+      //   return;
+      // }
+      var distance = Math.sqrt(Math.pow((x-el.left),2) + Math.pow((y - el.top),2));
+      if(distance <= 50 && distance > 0) {
+        $('.collision')[0].play();
+        console.log('collide!');
       }
     });  
   };
-  checkPosition();
+  checkPosition(this.top, this.left);
 };
