@@ -3,7 +3,8 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url("background.jpg");
+  background-size: cover;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -23,5 +24,22 @@ body, a:link, a:visited, a:active{
 .dancer{
   /*border:10px solid red;
   border-radius:10px;*/
-  position:absolute;
+  position: absolute;
+  transition: 1s
+}
+
+.dancer:hover{
+  transform: rotate(720deg);
+}
+.linedup{
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 80%;
+  
+}
+
+.dancer.linedupDancer{
+  position: inherit;
 }
