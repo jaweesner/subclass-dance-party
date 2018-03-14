@@ -3,6 +3,10 @@ var makeSizeDancer = function(top, left, timeBetweenSteps) {
   this.maxSize = Math.random() * 200;
   this.minSize = Math.random() * 50;
   this.sizeTime = Math.random() * 1000;
+  this.$node.css({
+    height: this.maxSize,
+    width: this.maxSize
+  })
 };
 
 makeSizeDancer.prototype = Object.create(Dancer.prototype);

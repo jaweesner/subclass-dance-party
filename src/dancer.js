@@ -7,8 +7,10 @@ var Dancer = function(top, left, timeBetweenSteps) {
   this.top = top;
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
+  var dancerOptions = ["metalDancer.gif","alien.gif","catGalaxy.gif"];
+  chooseDancer = dancerOptions[Math.round(Math.random() * (dancerOptions.length-1))];
   // use jQuery to create an HTML <span> tag
-  this.$node = $('<span class="dancer"><img height = "100px"; width = "100px" src="metalDancer.gif"></span>');
+  this.$node = $('<span class="dancer"><img height = "100px"; width = "100px" src='+ chooseDancer + '></span>');
   //this.$node.css({'background-image': 'url("metalDancer.gif")'});
   
   this.step();
