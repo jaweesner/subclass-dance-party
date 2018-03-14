@@ -6,7 +6,7 @@ var makeSizeDancer = function(top, left, timeBetweenSteps) {
   this.$node.css({
     height: this.maxSize,
     width: this.maxSize
-  })
+  });
 };
 
 makeSizeDancer.prototype = Object.create(Dancer.prototype);
